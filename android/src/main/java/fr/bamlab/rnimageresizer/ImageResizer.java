@@ -302,7 +302,7 @@ class ImageResizer {
         }
 
         String resizedImagePath = ImageResizer.saveImage(rotatedImage, path,
-                Long.toString(new Date().getTime()), compressFormat, quality);
+                Long.toString(new Date().getTime()+(Math.round(100 * 100) / 100)), compressFormat, quality);
 
         // Clean up remaining image
         rotatedImage.recycle();
